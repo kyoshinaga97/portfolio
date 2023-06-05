@@ -1,0 +1,105 @@
+/*---------------------------
+共通
+---------------------------*/
+body {
+    padding: 60px 0px 60px 0px;
+    font-family: 'Catamaran','Noto Sans JP',sans-serif;
+    font-size: 16px;
+    line-height: 1.8;
+    letter-spacing: 0.8px;
+    color: #2c2c2c;
+    display: flex;
+    justify-content: center;
+    overflow-wrap: break-word;
+}
+h1{
+    text-align: center;
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+.frame{
+    padding: 20px 0px 20px 0px;
+    width: 350px;
+    display: flex;
+    justify-content: center;
+    background-color: #ddd;
+    border: 5px solid#0dbd9a;
+    border-radius: 20px;
+}
+
+/*---------------------------
+確認画面
+---------------------------*/
+.a1{
+    width: 310px;
+}
+.b1{
+    margin-bottom: 16px;
+}
+.co1{
+    font-weight: bold;
+}
+.post{
+    font-size: 14px;
+    border: 1px solid #2c2c2c;
+}
+.g-recaptcha{
+    display: flex;
+    justify-content: center;
+}
+.btn{
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}
+.btn2{
+    width: 50%;
+}
+.btn2 a{
+    background-color: #ffffff;
+    font-weight: bold;
+    font-size: 16px;
+    letter-spacing: 0.1em;
+    text-decoration: none;
+    color: #2c2c2c;
+    display: inline-block;
+    padding: 8px 30px 8px 30px;
+    position: relative;
+    border: 1px solid #2c2c2c;
+    border-radius: 20px;
+}
+.btn2 button{
+    background-color: #ffffff;
+    font-weight: bold;
+    font-size: 16px;
+    letter-spacing: 0.1em;
+    text-decoration: none;
+    color: #2c2c2c;
+    display: inline-block;
+    padding: 8px 30px 8px 30px;
+    position: relative;
+    border: 1px solid #2c2c2c;
+    border-radius: 20px;
+}
+.post{
+    background-color: #ffffff;
+}
+
+/*---------------------------
+送信完了画面
+---------------------------*/
+.b2{
+    display: flex;
+}
+.co2{
+    font-size: 14px;
+}
+.btn_return{
+    display: flex;
+    justify-content: center;
+}
+.btn_return div{
+    display: flex;
+    justify-content: center;
+}
