@@ -32,7 +32,19 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 		}
 	} else {
 		echo "トークン無！！！！！！！";
-	}?>
+	}
+	/*メール送信時利用
+	*文字コード
+	mb_language("Japanese");
+	mb_internal_encoding("UTF-8");
+	*メール内容
+	$to = "k.yoshinaga2197@";
+	$subject = "お問合せがありました";
+	$message = "<連絡先:$post['name']> <連絡先:$post['email']> <連絡先:$post['comment']>"; 要編集
+	$headers = "From: $post['email']";
+	mb_send_mail($to, $subject, $message, $headers);
+	*/
+?>
 	<title>[DEMO]送信完了画面</title>
 </head>	
 	<body>

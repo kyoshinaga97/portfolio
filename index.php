@@ -1,13 +1,13 @@
 <?php
 session_start();
 $error = [];
-$get = 1; //GET時エラーの為追加 修正後消去
-$cl = 0;  //エラー修正後消去
+$get = 1; //GET時エラーの為追加 修正後消去　*動作問題無*
+$cl = 0;  //エラー修正後消去　*動作問題無*
 
 //errorチェック
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 	
-	//GET時エラーの為追加 修正後消去
+	//GET時エラーの為追加 修正後消去*動作問題無*
 	$get = "2";
 	
 	// 文字列フィルター
@@ -34,7 +34,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 		$cl ++;
 	}
 	if ($cl === 3) {
-		// エラーがないので確認画面に移動
+		// エラー無　時処理　確認画面へ
 		$_SESSION['form'] = $post;
 		header('Location: php/complete.php');
 		exit();
@@ -90,12 +90,11 @@ if (isset($_REQUEST["position"]) == true){
 				</ul>
 			</div>
 		</nav>
-		
 		<!-- ここまでヘッダー -->
 		<main>
 			<div class="profile" id="profile">
 				<h2>PROFILE</h2>
-				<div id="salutation"><!--  -->
+				<div class="salutation" id="salutation">
 					<div class=icon></div>
 					<p>
 					はじめまして。現在26歳、エンジニア志望のヨシナガと申します。<br>
@@ -103,7 +102,7 @@ if (isset($_REQUEST["position"]) == true){
 					これまでの私の経歴や習得、学習スキル等を簡単にまとめています。<br>
 					至らない部分もあるかと思いますが、是非御社で働きたい思いで作成しました。<br>
 					お手数ですが、続きも御覧頂ければ幸いです。<br><br>
-					尚、気になる点や質問があれば気軽に「<a href="#contact">CONTACT</a>」からご連絡頂ければ幸いです。
+					気になる点や質問があれば気軽に「<a href="#contact">CONTACT</a>」からご連絡頂ければ幸いです。
 					</p>
 				</div>
 			</div>
@@ -119,7 +118,7 @@ if (isset($_REQUEST["position"]) == true){
 						<!-- バックエンド -->
 						<div class="backend">
 							<h4 class="graph name">バックエンド</h4>
-							<p>要編集</p>
+							<p>訓練中はPHPでの開発を多く行いました。</p>
 							<table class="table">
 								<thead>
 									<tr>
@@ -156,7 +155,7 @@ if (isset($_REQUEST["position"]) == true){
 									<tr>
 										<th scope="col">技術</th>
 										<th class="align" scope="col">経験年数</th>
-										<th class="align" scope="col">スキルLv</th>
+										<th class="align" scope="col">&nbsp;&nbsp;スキルLv</th>
 									</tr>
 								</thead>
 								<tbody>
@@ -176,13 +175,13 @@ if (isset($_REQUEST["position"]) == true){
 						<!-- フロントエンド -->
 						<div class="frontend">
 							<h4 class="graph name">フロントエンド</h4>
-							<p>要編集</p>
+							<p>訓練ではJavaScriptを頻繁に使用しました。<br>&nbsp;</p>
 							<table class="table">
 								<thead>
 									<tr>
 										<th scope="col">技術</th>
 										<th class="align" scope="col">経験年数</th>
-										<th class="align" scope="col">スキルLv</th>
+										<th class="align" scope="col">&nbsp;&nbsp;スキルLv</th>
 									</tr>
 								</thead>
 								<tbody>
@@ -202,7 +201,9 @@ if (isset($_REQUEST["position"]) == true){
 						<!-- データベース -->
 						<div class="backend">
 							<h4 class="graph name">DB</h4>
-							<p>要編集</p>
+							<p>基本的な事は一通りできます。<br>
+								訓練時は「LAMP環境」を利用、構築していまいした。
+							</p>
 							<table class="table">
 								<thead>
 									<tr>
@@ -264,7 +265,7 @@ if (isset($_REQUEST["position"]) == true){
 						<div class="border">
 							<div class="flex">
 								<p class="skill-name">PHP：</p>
-								<p class="ec1">ログイン関連、会員登録・情報関連、DB接続、お気に入り機能、ショッピングカート</p>
+								<p class="ec1">ログイン関連,会員登録・情報関連,DB接続,お気に入り機能,ショッピングカート</p>
 							</div>
 							<div class="flex">
 								<p class="skill-name">JavaScript･jQuery：</p>
@@ -311,25 +312,26 @@ if (isset($_REQUEST["position"]) == true){
 			</div>
 			<?php if ($get == "1"): include("php/contact.php"); else:  //出来れば修正?>
 			<div class="contact" id="contact">
-			<h2>CONTACT</h2>
-			<p>
-			ご覧いただき大変ありがとうございました！
-			このサイトや私について少しでも気になる点や質問等御座いましたら、お気軽に下記フォームよりご連絡ください。<br>
-			※補足※<br></p>
-			<div class="p1">
-				<p>・</p><p>DEMOサイトの為実際はお問い合わせ内容は送信されません。</p>
-			</div>
-			<div class="p1">
-				<p>・</p><p>一枚ページに仕上げたかったのですが、「CONTACT」部分のエラーチェックや動作確認を行って頂く場合がある際は
-				テスト時に手間がかかる可能性があると判断し、下記部分のみ別ページを設置しました。
+				<h2>CONTACT</h2>
+				<p class="pp">
+					ご覧いただき大変ありがとうございました！
+					このサイトや私について少しでも気になる点や質問等御座いましたら、お気軽に下記フォームよりご連絡ください。<br>
+					※補足※<br>
 				</p>
-			</div>
-			<form method="POST" action="" novalidate>
-			<div id="contact_form">
-			<div class="name-area">
-			<label for="name" id="name-title">Name</label><br>
-			<input id="name" name="name" type="text"  value="<?php echo htmlspecialchars($post['name']); ?>" required>
-					<?php if($error['name'] === 'blank'): ?>
+				<div class="p1">
+					<p>・</p><p>DEMOサイトの為実際はお問い合わせ内容は送信されません。</p>
+				</div>
+				<div class="p1">
+					<p>・</p><p>一枚ページに仕上げたかったのですが、「CONTACT」部分のエラーチェックや動作確認を行って頂く場合がある際は
+					テスト時に手間がかかる可能性があると判断し、下記部分のみ別ページを設置しました。
+					</p>
+				</div>
+				<form method="POST" action="" novalidate>
+					<div id="contact_form">
+						<div class="name-area">
+							<label for="name" id="name-title">Name</label><br>
+							<input id="name" name="name" type="text"  value="<?php echo htmlspecialchars($post['name']); ?>" required>
+							<?php if($error['name'] === 'blank'): ?>
 								<p class="error_msg">※お名前をご記入下さい。</p>
 							<?php endif; ?>
 						</div>
@@ -349,20 +351,20 @@ if (isset($_REQUEST["position"]) == true){
 								<p class="error_msg">※お問い合わせ内容をご記入下さい。</p>
 							<?php endif; ?>
 							<textarea id="textarea" name="comment" rows="10" class="form-control" required><?php echo htmlspecialchars($post['comment']); ?></textarea>
+							<div class="btn-area" id="submit_btn" >
+								<button type="submit" class="submit_btn">送 信</button>
+							</div>
 						</div>
 						<input name="position" type="hidden" value="0"><!--  -->
-						<div class="btn-area" id="submit_btn" >
-							<button type="submit" class="submit_btn">送 信</button>
-						</div>
 					</div>
 				</form>
 			</div>
 			<?php endif; ?>
 		</main>
 		<footer id="footer">
-			<div class="aroow_up">
+			<!-- <div class="aroow_up">
 				<a href="#" class="top_btn"><i class="material-icons">⇧</i></a>
-			</div>
+			</div> -->
 			<div class="copyright">
 				<p>© 2023 Keita Yoshinaga</p>
 			</div>

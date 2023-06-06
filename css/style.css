@@ -13,10 +13,9 @@ body {
 /*---------------------------
 全体
 ---------------------------*/
-main {/**/
+main {
   width: 1200px;
   margin: 0 auto 50px;
-  /*要修正*/
 }
 h2 {
   color: #0dbd9a;
@@ -30,6 +29,22 @@ h2 {
 /*---------------------------
 ヘッダー
 ---------------------------*/
+@media (max-width: 1200px){
+  nav{
+    width: 1200px;
+  }
+  header{
+    width: 1200px;
+  }
+}
+@media (max-width: 500px){
+  nav{
+    width: 1200px;
+  }
+  header{
+    width: 1200px;
+  }
+}
 header{
   background-image: url(../images/tile.jpg);
   margin: 0;
@@ -40,19 +55,6 @@ header{
   justify-content: center;
   align-items: center;
 }
-/*@media screen and (max-width: 500px){
-  header{
-  background-image: url(../images/tile.jpg);
-  margin: 0;
-  padding: 0;
-  font-weight: bold;
-  height: 100px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 100%;
-  }
-}*/
 h1{
   line-height: 1.2;
   font-size: 0px;
@@ -84,13 +86,7 @@ nav ul{
   border-bottom: 2px solid #0dbd9a;
   padding: 12px 0 10px;
 }
-/*要修正*/
-/*
-@media (max-width: 1200px){
-nav{
-  max-width: 1200px;
-}
-}*/
+/*スクロール時*/
 nav.fix {
   position: fixed;
   width: 100%;
@@ -117,6 +113,13 @@ profile
   width: 700px;
   margin: 0 auto;
 }
+@media (max-width: 500px){
+  #profile p{
+    width: 800px;
+    margin: 0 auto;
+    font-size: 20px;
+  }
+}
 #profile a{
   color: #0000FF;
   font-weight: bold;
@@ -135,10 +138,17 @@ skill
   width: 700px;
   margin: 0 auto;
 }
+@media (max-width: 500px){
+  .skill-text{
+    width: 800px;
+    margin: 0 auto;
+    font-size: 20px;
+  }
+}
 #graph{
   display: flex;
   flex-wrap: wrap;
-  margin: 0 5px;
+  margin: 0 15px 0 28.6px;
 }
 #graph div{
   background-color: #ddd;
@@ -146,7 +156,7 @@ skill
   margin-top: 35px;
   margin-right: auto;
   padding: 35px;
-  width: 49%;/*間隔　*/
+  width: 49%;
   text-align: center;
   border-radius: solid 10px;
 }
@@ -156,7 +166,7 @@ skill
   margin-top: 35px;
   margin-right: auto;
   padding: 35px;
-  width: 99%;/*間隔　*/
+  width: 99%;
   text-align: center;
   border-radius: solid 10px;
 }
@@ -167,13 +177,11 @@ skill
   text-align: center;
 }
 #graph tr th{
-  /*編集*/
   width: calc(100%/3);
   padding-left: 5px;
   padding-right: 20px;
 }
 #graph .backend tr th{
-  /*編集*/
   width: calc(100%/3);
   padding-left: 0;
   padding-right: 0;
@@ -188,7 +196,7 @@ skill
   margin: 0px auto 10px;
 }
 #graph p{
-  margin-bottom: 10px;/**/
+  margin-bottom: 10px;
 }
 h6{
   font-weight: bold;
@@ -207,11 +215,12 @@ works
 ---------------------------*/
 #works{
   padding: 80px 10px 35px 0px;
+  margin: 0 18px 0 10px;
 }
 .works-h2{
 margin: 20px auto 0
 }
-h3 {/*位置と横幅変更*/
+h3 {
   font-size: 28px;
   font-weight: bold;
   display: inline-block;
@@ -251,7 +260,7 @@ h3 {/*位置と横幅変更*/
   height: 255px;
   border-bottom: 3px solid #ddd;
 }
-.under{/*修正*/
+.under{
   padding: auto;
 }
 .link{
@@ -278,11 +287,6 @@ h5{
   font-weight: bold;
   color: #0dbd9a;
   margin-top: 10px;
-  /*background-color: blue;
-  color: #ffffff;
-  font-weight: bold;
-  text-align: center;
-  width: 150px;*/
 }
 .works-right .border{
   border-bottom: 3px solid #ddd;
@@ -293,13 +297,12 @@ h5{
 .skill-name{
   font-weight: bold;
 }
-
 .opacity{
   opacity: 0;
 }
 
 /*---------------------------
-contact ！！！！！！！！！！！修正　難しい
+contact
 ---------------------------*/
 #contact{
   padding: 80px 10px 70px 0px;
@@ -307,6 +310,18 @@ contact ！！！！！！！！！！！修正　難しい
 #contact{
   width: 700px;
   margin: 0 auto;
+}
+@media (max-width: 500px){
+  .contact .pp{
+    margin: 0 auto;
+    font-size: 20px;
+    line-height: 1.6;
+  }
+  .p1{
+    font-size: 16px;
+    display: flex;
+    line-height: 1.4;
+  }
 }
 #contact_form{
   display: flex;
@@ -344,7 +359,7 @@ textarea {
   max-width: 646px;
   height: 100px;
   min-height: 100px;
-  max-height: 250px;
+  max-height: 190px;
   border-bottom: 2px solid #000000;
 }
 #submit_btn{
@@ -364,9 +379,11 @@ textarea {
   border: 2px solid #2c2c2c;
   border-radius: 20px;
 }
-.p1{
-  display: flex;
-  font-size: 12px;
+@media (min-width: 501px){
+  .p1{
+    display: flex;
+    font-size: 12px;
+  }
 }
 .error_msg{
   color: red;
@@ -378,8 +395,8 @@ footer
 #footer{
   background-color: #0dbd9a;
   text-align: center;
-  width: 100%;
-  padding: 30px 0;
+  margin-top: 130px;
+  padding: 50px 0;
 }
 #footer a{
   font-size: 30px;
@@ -387,4 +404,14 @@ footer
 }
 #footer p{
   color: #ffffff;
+}
+@media (max-width: 1200px){
+  footer{
+    width: 1200px;
+  }
+}
+@media (max-width: 500px){
+  footer{
+    width: 1200px;
+  }
 }

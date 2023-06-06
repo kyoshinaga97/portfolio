@@ -18,7 +18,7 @@
 	<main>
 		<div class="contact" id="contact">
 			<h2>CONTACT</h2>
-			<p><!-- contact -->
+			<p class="pp"><!-- contact -->
 			ご覧いただき大変ありがとうございました！
 			このサイトや私について少しでも気になる点や質問等御座いましたら、お気軽に下記フォームよりご連絡ください。<br>
 			＊補足＊<br></p>
@@ -30,7 +30,7 @@
 				テスト時に手間がかかる可能性があると判断し、下記部分のみ別ページを設置しました。
 				</p>
 			</div>
-			<form method="POST" action="" novalidate><!-- ノーバリ消す後で -->
+			<form method="POST" action="" novalidate><!-- ノーバリ不要か -->
 				<div id="contact_form">
 					<div class="name-area">
 						<label for="name" id="name-title">Name</label><br>
@@ -43,12 +43,12 @@
 					<div class="text-area">
 						<label for="comment" id="comment-title">Comment</label><br>
 						<textarea id="textarea" name="comment" rows="10" class="form-control" required></textarea>
-					</div>
-					<input name="position" type="hidden" value="0">
-					<div class="btn-area" id="submit_btn" >
-						<button type="submit" class="submit_btn">送 信</button>
+						<div class="btn-area" id="submit_btn" >
+							<button type="submit" class="submit_btn">送 信</button>
+						</div>
 					</div>
 				</div>
+				<input name="position" type="hidden" value="0">
 			</form>
 		</div>
 	</main>
